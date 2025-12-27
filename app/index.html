@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Project - Advanced Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1 1 calc(33% - 20px);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DevOps Project</h1>
+  <p>Deployed using Docker & Kubernetes</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#features">Features</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About This Project</h2>
+  <p>This project demonstrates a full DevOps workflow using Nginx, Docker, and Kubernetes. It includes automated deployment, scaling, and service exposure using NodePort. The page you see is served by an Nginx container running in a Minikube cluster.</p>
+</section>
+
+<section id="features">
+  <h2>Project Features</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Docker Container</h3>
+      <p>The app is containerized using Docker. The image is built and run inside the Minikube environment to avoid ImagePullBackOff issues.</p>
+    </div>
+    <div class="card">
+      <h3>Kubernetes Deployment</h3>
+      <p>Deployment uses a Kubernetes Deployment object with 2 replicas, ensuring high availability and automated restarts.</p>
+    </div>
+    <div class="card">
+      <h3>Kubernetes Service</h3>
+      <p>A NodePort Service exposes the app externally, allowing access through the Minikube IP and the assigned port.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>If you have questions about this project, feel free to reach out!</p>
+  <button onclick="alert('Thanks for contacting me!')">Contact Me</button>
+</section>
+
+<footer>
+  <p>DevOps Project &copy; 2025 | Nginx + Docker + Kubernetes</p>
+</footer>
+
+</body>
+</html>
